@@ -52,13 +52,58 @@ button {
 }
 
 button:hover {
-    background: #ffcf99;
+    background-color: #ffffff;
     color: #33332d;
+}
+
+
+.disabled {
+    cursor: default;
+    pointer-events: none;
+    color: #33332d;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 6px;
 }
 
 
 #content {
     background-color: #33332d;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s;
 }
 
+
+/* ------------------ HOME ---------------- */
+
+h1 {
+    padding: 1em;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+img {
+    border-radius: 50%;
+    max-width: 300px;
+}
+
+img:hover {
+    filter: sepia(30%);
+}
+
+.learnMore {
+    margin-top: 30px;
+    padding: 30px 40px;
+    font-size: 1.5em;
+}
+
+h4 {
+    max-width: 300px;
+    padding: 7px;
+    text-align: center;
+    box-shadow: 0 0 10px 5px rgb(80, 71, 71);
+}

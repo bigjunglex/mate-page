@@ -1,9 +1,9 @@
 import './style.css';
-// import treeImg from "./img/mate_tree.jpg";
 import aboutPage from './pages/about.js';
 import homePage from './pages/home.js';
 import menuPage from './pages/menu.js';
 
+const contentContainer = document.querySelector('#content');
 const home = document.querySelector('#home');
 const menu = document.querySelector('#menu');
 const about = document.querySelector('#about');
@@ -11,24 +11,32 @@ const about = document.querySelector('#about');
 
 home.addEventListener('click', () => {
     console.log('HOME PAGE')
-    homePage();
+    homePage(contentContainer);
+    menu.classList.remove('disabled');
+    about.classList.remove('disabled');
+    home.classList.add('disabled');
 })
 menu.addEventListener('click', () => {
     console.log('MENY PAGE')
-    menuPage();
+    menuPage(contentContainer);
+    home.classList.remove('disabled');
+    about.classList.remove('disabled');
+    menu.classList.add('disabled');
 })
 about.addEventListener('click', () => {
     console.log('ABOUT PAGE')
-    aboutPage();
+    aboutPage(contentContainer);
+    menu.classList.remove('disabled');
+    home.classList.remove('disabled');
+    about.classList.add('disabled');
 })
 
 
 
-homePage()
+homePage(contentContainer);
 
 
 
-// const contentContainer = document.querySelector('#content');
 
 // let img = document.createElement('img');
 // img.src = treeImg;
